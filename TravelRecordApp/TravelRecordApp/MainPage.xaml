@@ -4,10 +4,13 @@
              xmlns:local="clr-namespace:TravelRecordApp"
              x:Class="TravelRecordApp.MainPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout VerticalOptions="Center" Margin="20,0">
+            <Entry x:Name="emailEntry" Placeholder="EmailAddress" Keyboard="Email"/>
+
+            <Entry x:Name="passwordEntry" Placeholder="Password" IsPassword="True"/>
+
+            <Button x:Name="LogInButton" Text="Log In" Clicked="LogInButton_Clicked" BackgroundColor="DodgerBlue" TextColor="White"
+                    Margin="0,50,0,0"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
