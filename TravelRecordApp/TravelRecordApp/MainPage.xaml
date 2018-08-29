@@ -4,12 +4,16 @@
              xmlns:local="clr-namespace:TravelRecordApp"
              x:Class="TravelRecordApp.MainPage">
     <ContentPage.Content>
+
+       
+
+
         <StackLayout VerticalOptions="Center" Margin="20,0">
-            <Entry x:Name="emailEntry" Placeholder="EmailAddress" Keyboard="Email"/>
+            <Entry x:Name="emailEntry" Placeholder="EmailAddress" Keyboard="Email" TextColor="{StaticResource blueColor}"/>
 
             <Entry x:Name="passwordEntry" Placeholder="Password" IsPassword="True"/>
 
-            <Button x:Name="LogInButton" Text="Log In" Clicked="LogInButton_Clicked" BackgroundColor="DodgerBlue" TextColor="White"
+            <Button x:Name="LogInButton" Text="Log In" Clicked="LogInButton_Clicked" BackgroundColor= "{StaticResource blueColor}"   TextColor="White"
                     Margin="0,50,0,0"/>
         </StackLayout>
     </ContentPage.Content>
