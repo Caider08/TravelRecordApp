@@ -4,9 +4,18 @@
              x:Class="TravelRecordApp.HistoryPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to the History Page"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+
+            <ListView x:Name="PostListView">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Experience}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                
+            </ListView>
+            
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
