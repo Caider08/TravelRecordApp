@@ -7,7 +7,9 @@
         <StackLayout>
             <maps:Map x:Name="locationsMap"
                       HorizontalOptions="FillAndExpand"
-                      VerticalOptions="FillAndExpand"/>
+                      VerticalOptions="FillAndExpand"
+                      MapType="Hybrid"
+                      IsShowingUser="True"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
