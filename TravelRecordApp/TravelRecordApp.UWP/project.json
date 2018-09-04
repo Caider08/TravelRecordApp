@@ -1,7 +1,11 @@
 ﻿{
   "dependencies": {
     "Microsoft.Bcl.Build": "1.0.21",
+<<<<<<< HEAD
     "Microsoft.NETCore.UniversalWindowsPlatform": "6.1.7",
+=======
+    "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
+>>>>>>> 99732c7e30cfecdd4698cbef41c7e1f24640fdff
     "Newtonsoft.Json": "11.0.2",
     "sqlite-net-pcl": "1.4.118",
     "Xamarin.Forms": "3.1.0.697729",
