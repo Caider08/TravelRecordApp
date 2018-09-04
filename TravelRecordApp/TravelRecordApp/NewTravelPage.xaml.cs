@@ -31,37 +31,58 @@ namespace TravelRecordApp
 
             var venues = VenueLogic.GetVenue(position.Latitude, position.Longitude);
 
+            //venueListView.ItemSource = venues;
+
 
 
         }
 
         private void ToolbarItem_Clicked(object sender, EventArgs e)
         {
-            Post newPost = new Post()
+            try
             {
-                Experience = ExperienceEntry.Text,
 
-               
+                //var selectedVenue = venueListView.SelectedItem as Venue;
+                //var firstCategory = selectedVenue.categories.FirstOrDefault();
+
+                Post newPost = new Post()
+                {
+                    Experience = ExperienceEntry.Text,
+
+                    //CategorId = firstCategory.id
+                    //CategoryName = firstCategory.name,
+                    //Address = selectedVenue.location.address,
+                    //Distance = 
 
 
-            };
 
-            using (SQLiteConnection con = new SQLiteConnection(App.DatabaseLocation))
+                };
+
+                using (SQLiteConnection con = new SQLiteConnection(App.DatabaseLocation))
+                {
+                    con.CreateTable<Post>();
+
+                    int rows = con.Insert(newPost);
+
+
+
+                    if (rows >= 1)
+                    {
+                        DisplayAlert("Success", "Experience Successfully Inserted", "OK");
+                    }
+                    else
+                    {
+                        DisplayAlert("Failure", "Failed to insert Experience", "OK");
+                    }
+
+                }
+            }
+            catch(NullReferenceException ere)
             {
-                con.CreateTable<Post>();
 
-                int rows = con.Insert(newPost);
-
-                
-
-                if (rows >= 1)
-                {
-                    DisplayAlert("Success", "Experience Successfully Inserted", "OK");
-                }
-                else
-                {
-                    DisplayAlert("Failure", "Failed to insert Experience", "OK");
-                }
+            }
+            catch (Exception ex)
+            {
 
             }
 
